@@ -10,7 +10,12 @@
     <h1>Clothes</h1>
     <ul>
         @foreach ($clothes as $clothe)
-            <li>{{$clothe->title}} {{$clothe->brand}} {{$clothe->description}} {{$clothe->price}}</li>  
+            <li>{{$clothe->title}} {{$clothe->brand}} {{$clothe->description}} {{$clothe->price}}</li>
+            <form action="{{ route('clothes.destroy', $clothe) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit">Delete</button>
+            </form>  
         @endforeach
     </ul>
 </body>

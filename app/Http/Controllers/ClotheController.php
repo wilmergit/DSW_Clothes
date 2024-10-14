@@ -30,4 +30,10 @@ class ClotheController extends Controller
 
         return redirect()->route('clothes.index');
     }
+
+    public function destroy(Clothe $clothe)
+    {
+        $clothe->delete();
+        return to_route('clothes.index')->with('status', 'Clothe deleted');
+    }
 }
