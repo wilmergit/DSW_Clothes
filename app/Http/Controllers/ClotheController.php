@@ -19,6 +19,11 @@ class ClotheController extends Controller
         return view('clothes.create');
     }
 
+    public function show(Clothe $clothe)
+    {
+        return view('clothes.show', ['clothe' => $clothe]);
+    }
+
     public function store(Request $request)
     {
         $clothe = new Clothe;
@@ -35,5 +40,30 @@ class ClotheController extends Controller
     {
         $clothe->delete();
         return to_route('clothes.index')->with('status', 'Clothe deleted');
+    }
+
+    public function edit(Clothe $clothe)
+    {
+        return view('clothes.edit', ['clothe' => $clothe]);
+    }
+
+    public function update(Request $request, $clothe)
+    {
+        $request->validate([
+            'title' => ['required'],
+            'brand' => ['required'],
+            'description' => ['required'],
+            'price' => ['required'],
+        ]);
+
+        $clothe->title = $request->input('title');
+        $clothe->brand = $request->input('brand');
+        $clothe->description = $request->input('description');
+        $clothe->price = $request->input('price');
+        $clothe->save();
+
+        session()->flash('status', 'Post updated!');
+
+        return to_route('clothes.show', $clothe);
     }
 }
