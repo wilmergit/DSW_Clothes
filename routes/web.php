@@ -12,5 +12,5 @@ Route::get('clothes/create', function () {
 });
 
 //Route::patch('clothes/{clothes}', [ClotheController::class, 'update']);
-Route::delete('clothes/{clothe}', [ClotheController::class, 'destroy']);
+//Route::delete('clothes/{clothes}', [ClotheController::class, 'destroy']);
 Route::resource('clothes', ClotheController::class);

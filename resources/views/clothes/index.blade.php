@@ -9,10 +9,10 @@
 <body>
     <h1>Clothes</h1>
     <ul>
-        @foreach ($clothes as $clothe)
-            <li>{{$clothe->title}} {{$clothe->brand}} {{$clothe->description}} {{$clothe->price}}</li>
-            <a href="{{ route('clothes.edit', $clothe) }}">Edit</a>
-            <form action="{{ route('clothes.destroy', $clothe->id) }}" method="POST">
+        @foreach ($clothes as $clothes)
+            <li>{{$clothes->title}} {{$clothes->brand}} {{$clothes->description}} {{$clothes->price}}</li>
+            <a href="{{ route('clothes.edit', $clothes) }}">Edit</a>
+            <form action="{{ route('clothes.destroy', $clothes->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit">Delete</button>

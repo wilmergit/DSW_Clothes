@@ -21,44 +21,38 @@ class ClotheController extends Controller
 
     public function store(Request $request)
     {
-        $clothe = new Clothe;
-        $clothe->title = $request->input('title');
-        $clothe->brand = $request->input('brand');
-        $clothe->description = $request->input('description');
-        $clothe->price = $request->input('price');
-        $clothe->save();
+        $clothes = new Clothe;
+        $clothes->title = $request->input('title');
+        $clothes->brand = $request->input('brand');
+        $clothes->description = $request->input('description');
+        $clothes->price = $request->input('price');
+        $clothes->save();
 
         return redirect()->route('clothes.index');
     }
 
-    public function destroy(Clothe $clothe): RedirectResponse
+    public function destroy(Clothe $clothes): RedirectResponse
     {
-        $clothe->delete();
-        return redirect()->route('clothes.index')->with('status', 'Clothe deleted');
+        $clothes->delete();
+        return redirect()->route('clothes.index')->with('status', 'Clothes deleted');
     }
 
-    public function edit(Clothe $clothe)
+    public function edit(Clothe $clothes)
     {
-        return view('clothes.edit', compact('clothe'));
+        return view('clothes.edit', compact('clothes'));
     }
 
-    public function update(Request $request, $clothe)
+    public function update(Request $request, Clothe $clothes)
     {
-        $request->validate([
-            'title' => ['required'],
-            'brand' => ['required'],
-            'description' => ['required'],
-            'price' => ['required'],
-        ]);
 
-        $clothe->title = $request->input('title');
-        $clothe->brand = $request->input('brand');
-        $clothe->description = $request->input('description');
-        $clothe->price = $request->input('price');
-        $clothe->save();
+        $clothes->title = $request->input('title');
+        $clothes->brand = $request->input('brand');
+        $clothes->description = $request->input('description');
+        $clothes->price = $request->input('price');
+        $clothes->save();
 
         session()->flash('status', 'Post updated!');
 
-        return to_route('clothes.index', $clothe);
+        return to_route('clothes.index', $clothes);
     }
 }
