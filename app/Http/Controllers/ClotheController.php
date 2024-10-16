@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Http\RedirectResponse;
 use App\Models\Clothe;
 
 class ClotheController extends Controller
@@ -19,11 +19,6 @@ class ClotheController extends Controller
         return view('clothes.create');
     }
 
-    public function show(Clothe $clothe)
-    {
-        return view('clothes.show', ['clothe' => $clothe]);
-    }
-
     public function store(Request $request)
     {
         $clothe = new Clothe;
@@ -36,15 +31,15 @@ class ClotheController extends Controller
         return redirect()->route('clothes.index');
     }
 
-    public function destroy(Clothe $clothe)
+    public function destroy(Clothe $clothe): RedirectResponse
     {
         $clothe->delete();
-        return to_route('clothes.index')->with('status', 'Clothe deleted');
+        return redirect()->route('clothes.index')->with('status', 'Clothe deleted');
     }
 
     public function edit(Clothe $clothe)
     {
-        return view('clothes.edit', ['clothe' => $clothe]);
+        return view('clothes.edit', compact('clothe'));
     }
 
     public function update(Request $request, $clothe)
@@ -64,6 +59,6 @@ class ClotheController extends Controller
 
         session()->flash('status', 'Post updated!');
 
-        return to_route('clothes.show', $clothe);
+        return to_route('clothes.index', $clothe);
     }
 }

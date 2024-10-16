@@ -7,7 +7,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('clothes/{clothe}', [ClotheController::class, 'show']);
-Route::patch('clothes/{clothe}', [ClotheController::class, 'update']);
+Route::get('clothes/create', function () {
+    return view('create');
+});
+
+//Route::patch('clothes/{clothes}', [ClotheController::class, 'update']);
 Route::delete('clothes/{clothe}', [ClotheController::class, 'destroy']);
 Route::resource('clothes', ClotheController::class);

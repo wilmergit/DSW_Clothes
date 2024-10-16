@@ -12,7 +12,7 @@
         @foreach ($clothes as $clothe)
             <li>{{$clothe->title}} {{$clothe->brand}} {{$clothe->description}} {{$clothe->price}}</li>
             <a href="{{ route('clothes.edit', $clothe) }}">Edit</a>
-            <form action="{{ route('clothes.destroy', $clothe) }}" method="POST">
+            <form action="{{ route('clothes.destroy', $clothe->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit">Delete</button>
