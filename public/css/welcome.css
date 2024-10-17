@@ -123,3 +123,8 @@ a {
     font-weight: 400;
     letter-spacing: 1px;
 }
+
+a:hover {
+    background-color: #000000;
+    transition: 0.3s;
+}

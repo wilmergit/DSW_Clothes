@@ -1,0 +1,119 @@
+/*Titulo*/
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap");
+/*Texto*/
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+body {
+    margin: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+    font-family: "Anton", sans-serif;
+}
+
+header {
+    margin-top: 0.5em;
+    background-color: #000000;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: "Libre Barcode 128 Text", system-ui;
+    color: #40a2d8;
+}
+
+.main-wrapper {
+    margin: 0;
+    background-color: #000000;
+    height: 100vh;
+    border-radius: 0px 0px 10px 10px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    padding: 0.8em;
+}
+
+.edit-btn {
+    text-decoration: none;
+    padding: 0.2em;
+    background-color: #40a2d8;
+    border-radius: 10px;
+    color: #000000;
+    text-align: center;
+    width: 65px;
+}
+
+.item-number {
+    color: #0b60b0;
+    font-size: 25px;
+}
+
+li {
+    color: #40a2d8;
+    list-style: none;
+}
+
+.item-title {
+    color: #0b60b0;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.item-brand {
+    text-transform: uppercase;
+}
+
+.delete-btn {
+    background-color: #ffffff;
+    border-style: none;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    font-family: "Anton", sans-serif;
+    font-size: 17px;
+
+    letter-spacing: 0.6px;
+}
+
+.delete-btn:hover {
+    background-color: #ff0000;
+    transition: 0.4s;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+    color: #0b60b0;
+}
+
+.home-btn {
+    text-decoration: none;
+    padding: 0.2em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    text-align: center;
+    width: 70px;
+}
+
+.home-btn:hover {
+    background-color: #0b60b0;
+    color: #ffffff;
+    transition: 0.4s;
+}
