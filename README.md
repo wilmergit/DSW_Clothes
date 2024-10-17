@@ -9,6 +9,12 @@ Virtual Clothes is the perfect website to share your hand made clothes for every
 -   [VisualCodeStudio](https://code.visualstudio.com/) - The web framework used
 -   [Laragon](https://laragon.org/) - Used to generate RSS Feeds
 
+-   [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+
+-   [PHP](https://www.php.net/manual/es/intro-whatis.php)
+
+-   [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+
 ## Authors
 
 -   **Wilmer Zeas Rodriguez**
