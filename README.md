@@ -7,8 +7,7 @@ Virtual Clothes is the perfect website to share your hand made clothes for every
 ## Built With
 
 -   [VisualCodeStudio](https://code.visualstudio.com/) - The web framework used
--   [Postman](https://documenter.getpostman.com/view/38432276/2sAXxMfD9d) - Dependency Management
--   [MySqlWorkbench](https://www.mysql.com/products/workbench/) - Used to generate RSS Feeds
+-   [Laragon](https://laragon.org/) - Used to generate RSS Feeds
 
 ## Authors
 
