@@ -9,10 +9,13 @@
 </head>
 <body>
     <header>
-        <h1 class="title">Clothes</h1>
+        <h1 class="title">Virtual Clothes</h1>
     </header>
     <main class="main-wrapper">
-        <a class="home-btn" href="{{url('/')}}">< Home</a>
+        <div class="btns-nav">
+            <a class="home-btn" href="{{url('/')}}">< Home</a>
+            <a class="add-btn" href="{{ route('clothes.create') }}">Add ></a>
+        </div>
         <ul>
             @foreach ($clothes as $clothes)
                 <h2 class="item-number">{{$clothes->id}}</h2>

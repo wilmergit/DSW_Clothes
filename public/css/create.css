@@ -1,0 +1,150 @@
+/*Titulo*/
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap");
+/*Texto*/
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+body {
+    font-family: "Anton", sans-serif;
+    background-color: #222831;
+}
+
+.main-wrapper {
+    margin: 0;
+    background-color: #000000;
+    height: 70vh;
+    border-radius: 0px 0px 10px 10px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+header {
+    margin-top: 0.5em;
+    background-color: #000000;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: "Libre Barcode 128 Text", system-ui;
+    color: #40a2d8;
+}
+
+.subtitle {
+    color: #0b60b0;
+    font-size: 30px;
+}
+
+label {
+    color: #40a2d8;
+    font-size: 25px;
+    margin-top: 0.4em;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+input {
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 28px;
+    width: 150px;
+    font-family: "Anton", sans-serif;
+    text-align: center;
+    border: none;
+}
+
+hr {
+    width: 100%;
+    color: #0b60b0;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home-btn {
+    text-decoration: none;
+    padding: 0.2em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    text-align: center;
+    width: 70px;
+    height: 25px;
+}
+
+.home-btn:hover {
+    background-color: #0b60b0;
+    color: #ffffff;
+    transition: 0.4s;
+}
+
+.list-btn {
+    text-decoration: none;
+    padding: 0.2em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    text-align: center;
+    width: 70px;
+    height: 25px;
+}
+
+.list-btn:hover {
+    background-color: #0b60b0;
+    color: #ffffff;
+    transition: 0.4s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+footer {
+    margin: 0;
+    margin-top: 1em;
+    background-color: #000000;
+    height: 10vh;
+    border-radius: 10px 10px 10px 10px;
+    padding: 1em;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 0.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sbm {
+    text-decoration: none;
+    padding: 0.2em;
+    border-radius: 10px;
+    color: #000000;
+    text-align: center;
+    width: 80px;
+    height: 29px;
+    border: none;
+    font-size: 16px;
+    font-family: "Anton", sans-serif;
+}
+
+h3 {
+    color: #0b60b0;
+    font-size: 47px;
+    text-align: center;
+}

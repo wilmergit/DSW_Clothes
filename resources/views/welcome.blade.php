@@ -39,7 +39,7 @@
             </div>
             <p class="step-text">Fill the following form and we will do the rest.</p>
         </article>
-        <a href="{{route('clothes.index')}}">Begin</a>
+        <a href="{{route('clothes.create')}}">Begin</a>
     </section>
 
 </body>

@@ -9,6 +9,7 @@ body {
     padding-right: 0.5em;
     padding-bottom: 0.5em;
     font-family: "Anton", sans-serif;
+    background-color: #222831;
 }
 
 header {
@@ -53,6 +54,12 @@ ul {
     width: 65px;
 }
 
+.edit-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.4s;
+}
+
 .item-number {
     color: #0b60b0;
     font-size: 25px;
@@ -81,13 +88,13 @@ li {
     height: 60px;
     font-family: "Anton", sans-serif;
     font-size: 17px;
-
     letter-spacing: 0.6px;
 }
 
 .delete-btn:hover {
     background-color: #ff0000;
     transition: 0.4s;
+    color: #ffffff;
 }
 
 .btns {
@@ -116,4 +123,26 @@ hr {
     background-color: #0b60b0;
     color: #ffffff;
     transition: 0.4s;
+}
+
+.add-btn {
+    text-decoration: none;
+    padding: 0.2em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    text-align: center;
+    width: 70px;
+}
+
+.add-btn:hover {
+    background-color: #0b60b0;
+    color: #ffffff;
+    transition: 0.4s;
+}
+
+.btns-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
